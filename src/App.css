@@ -1,0 +1,82 @@
+:root {
+  --color-background: hsl(210, 22%, 18%);
+  --color-card: hsl(210, 14%, 22%);
+  --color-button: hsl(155, 100%, 65%);
+  --color-text: hsl(198, 47%, 84%);
+  --color-button-center: hsl(210, 17%, 21%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .quotes-container {
+    background-color: var(--color-card);
+    border-radius: 15px;
+    padding: 2.5rem;
+    max-width: 540px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    .advice-number {
+      color: var(--color-button);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote {
+      font-size: 1.75rem;
+      line-height: 1.4;
+      margin-bottom: 2.5rem;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '"';
+        color: var(--color-text);
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Adds space between the buttons */
+    }
+
+    .button {
+      background-color: var(--color-button);
+      border: none;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .icon-dice,
+      .icon-file_copy {
+        font-size: 2rem;
+        color: var(--color-button-center);
+      }
+    }
+  }
+}
