@@ -26,7 +26,7 @@ const Quotes = ({ quotes, showToast }: Props) => {
         .writeText(quoteText)
         .then(() => {
           console.log("Text copied to clipboard");
-          showToast(); // Toon toast na succesvol kopiëren
+          showToast();
         })
         .catch((err) => {
           console.error("Failed to copy text: ", err);
